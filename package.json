@@ -1,0 +1,9 @@
+{
+  "name": "example-alfred-workflow-nodejs",
+  "main": "main.js",
+  "dependencies": {
+    "alfred-workflow-nodejs": "^2.0.1",
+    "bluebird": "^3.4.7",
+    "sqlite": "^2.2.4"
+  }
+}
