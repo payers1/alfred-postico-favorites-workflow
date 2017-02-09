@@ -3,14 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.payers.alfredPosticoFavoritesWorkflow</string>
+	<string>com.payers.alfredPosticoFavoritesWorkflowV2.1</string>
+	<key>category</key>
+	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>3D0FA177-5AAE-4F7D-B7C0-DC068CAE2367</key>
+		<key>50B0CD10-4D52-4898-9C05-DD3A34A829C3</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EB4F85F2-9945-435C-932E-A4DE530C69EA</string>
+				<string>FAD41A22-B3AB-4288-9B5F-B11AF75B450C</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -19,8 +21,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>EB4F85F2-9945-435C-932E-A4DE530C69EA</key>
-		<array/>
 	</dict>
 	<key>createdby</key>
 	<string>Phill Ayers</string>
@@ -29,9 +29,52 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Postico Favorites</string>
+	<string>Open postico favorite</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>postico</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading favorites...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node main.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>test.sh</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Open postico favorite</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>50B0CD10-4D52-4898-9C05-DD3A34A829C3</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -40,11 +83,9 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>query="{query}"
-
-open $query</string>
+				<string>open $1</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
@@ -53,73 +94,38 @@ open $query</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>EB4F85F2-9945-435C-932E-A4DE530C69EA</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>keyword</key>
-				<string>postico</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>~/.nvm/versions/node/v7.0.0/bin/node main.js "getPosticoFavorites" "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Open postico favorite</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>3D0FA177-5AAE-4F7D-B7C0-DC068CAE2367</string>
+			<string>FAD41A22-B3AB-4288-9B5F-B11AF75B450C</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Alfred's Script Filter object is extremely powerful, and gives you control over the results displayed in Alfred.
+
+Alfred 3 now supports JSON, which is the recommended format. XML is also supported for legacy Alfred 2 workflows, and has been updated to include the new features.
+
+A new option now exists for Script Filters, "Alfred filters results". This allows you to return a whole list of results, let Alfred do the subsequent filtering with extreme performance. When this option is selected, your script will be called once with no argument.</string>
 	<key>uidata</key>
 	<dict>
-		<key>3D0FA177-5AAE-4F7D-B7C0-DC068CAE2367</key>
+		<key>50B0CD10-4D52-4898-9C05-DD3A34A829C3</key>
 		<dict>
+			<key>note</key>
+			<string>Alfred 3 now supports JSON as the Script Filter output. This is the recommended output.</string>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>70</integer>
 			<key>ypos</key>
-			<real>140</real>
+			<integer>50</integer>
 		</dict>
-		<key>EB4F85F2-9945-435C-932E-A4DE530C69EA</key>
+		<key>FAD41A22-B3AB-4288-9B5F-B11AF75B450C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>570</integer>
+			<integer>250</integer>
 			<key>ypos</key>
-			<integer>140</integer>
+			<integer>50</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/payers1/alfred-postico-favorites-workflow</string>
 </dict>

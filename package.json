@@ -1,9 +1,20 @@
 {
-  "name": "example-alfred-workflow-nodejs",
+  "name": "alfred-open-postico-favorites",
   "main": "main.js",
+  "license": "MIT",
+  "repository": "payers1/alfred-postico-favorites-workflow",
+  "author": {
+    "name": "Phill Ayers",
+    "email": "phillip.ayers@gmail.com",
+    "url": "phillayers.com"
+  },
   "dependencies": {
-    "alfred-workflow-nodejs": "^2.0.1",
+    "alfy": "^0.6.0",
     "bluebird": "^3.4.7",
     "sqlite": "^2.2.4"
+  },
+   "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
   }
 }
