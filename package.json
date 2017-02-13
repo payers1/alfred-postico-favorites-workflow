@@ -2,6 +2,7 @@
   "name": "alfred-open-postico-favorites",
   "main": "main.js",
   "license": "MIT",
+  "keywords": ["alfred", "postico"],
   "repository": "payers1/alfred-postico-favorites-workflow",
   "author": {
     "name": "Phill Ayers",
