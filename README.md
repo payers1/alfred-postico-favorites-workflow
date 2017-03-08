@@ -1,6 +1,8 @@
 # alfred-postico-favorites-workflow
 An Alfred workflow for accessing Postico favorites
 
+![downloads](https://img.shields.io/npm/dt/alfred-open-postico-favorites.svg)
+
 ## Install
 
 ```
