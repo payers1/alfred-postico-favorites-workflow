@@ -13,8 +13,7 @@ const buildConnectionString = ({ZUSER, ZHOST, ZPORT, ZDATABASE}) => {
     `${ZDATABASE || ''}`;
 }
 
-return P.resolve()
-  .then(() => db.open(location))
+return P.resolve(db.open(location))
   .then(() => db.all('SELECT ZNICKNAME, ZUSER, ZHOST, ZPORT, ZDATABASE FROM ZPGEFAVORITE'))
   .map(favorite => {
     const connectionString = buildConnectionString(favorite);
@@ -25,4 +24,4 @@ return P.resolve()
       valid: true
     }
   })
-  .then(items => alfy.output(items));
+  .then(alfy.output);
