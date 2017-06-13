@@ -1,7 +1,7 @@
 {
   "name": "alfred-open-postico-favorites",
   "main": "main.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "keywords": ["alfred", "postico"],
   "repository": "payers1/alfred-postico-favorites-workflow",
