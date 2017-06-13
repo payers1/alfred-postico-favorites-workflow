@@ -13,7 +13,7 @@ const buildConnectionString = ({ZUSER, ZHOST, ZPORT, ZDATABASE}) => [
     `${ZDATABASE || ''}`].join('');
 
 return P.resolve(db.open(location))
-  .then(() => db.all('SELECT ZNICKNAME, ZUSER, ZHOST, ZPORT, ZDATABASE FROM ZPGEFAVORITE'))
+  .then(() => db.all('SELECT * FROM ZPGEFAVORITE'))
   .map(favorite => ({
     title: favorite.ZNICKNAME && favorite.ZNICKNAME,
     subtitle: buildConnectionString(favorite),
