@@ -17,7 +17,6 @@ return P.resolve(db.open(location))
   .map(favorite => ({
     title: favorite.ZNICKNAME && favorite.ZNICKNAME,
     subtitle: buildConnectionString(favorite),
-    arg: buildConnectionString(favorite),
-    valid: true
+    arg: buildConnectionString(favorite)
   }))
   .then(alfy.output);
