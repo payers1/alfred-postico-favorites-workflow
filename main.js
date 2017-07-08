@@ -10,10 +10,13 @@ const buildConnectionString = ({ZUSER, ZHOST, ZPORT, ZDATABASE}) => [
     `${ZUSER ? ZUSER + '@' : ''}`,
     `${ZHOST || 'localhost'}`,
     `${ZPORT ? ':' + ZPORT : ''}`, '/',
-    `${ZDATABASE || ''}`].join('');
+    `${ZDATABASE || ''}`
+  ].join('');
+
+const getAllFavorites = () => db.all('SELECT * FROM ZPGEFAVORITE');
 
 return P.resolve(db.open(location))
-  .then(() => db.all('SELECT * FROM ZPGEFAVORITE'))
+  .then(getAllFavorites)
   .map(favorite => ({
     title: favorite.ZNICKNAME && favorite.ZNICKNAME,
     subtitle: buildConnectionString(favorite),
