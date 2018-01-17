@@ -1,7 +1,7 @@
 {
   "name": "alfred-open-postico-favorites",
   "main": "main.js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "keywords": [
     "alfred",
@@ -13,9 +13,9 @@
     "url": "phillayers.com"
   },
   "dependencies": {
-    "alfy": "^0.6.0",
-    "bluebird": "^3.4.7",
-    "sqlite": "^2.2.4"
+    "alfy": "^0.7.0",
+    "bluebird": "^3.5.1",
+    "sqlite": "^2.9.1"
   },
   "scripts": {
     "postinstall": "alfy-init",
