@@ -1,7 +1,7 @@
 {
   "name": "alfred-open-postico-favorites",
   "main": "main.js",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "keywords": [
     "alfred",
