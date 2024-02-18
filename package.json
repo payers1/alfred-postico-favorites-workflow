@@ -1,8 +1,9 @@
 {
   "name": "alfred-open-postico-favorites",
   "main": "main.js",
-  "version": "1.0.8",
+  "version": "2.0.0",
   "license": "MIT",
+  "type": "module",
   "keywords": [
     "alfred",
     "postico"
@@ -10,13 +11,12 @@
   "repository": "payers1/alfred-postico-favorites-workflow",
   "author": {
     "name": "Phill Ayers",
-    "url": "phillayers.com"
+    "url": "https://phillayers.com"
   },
   "dependencies": {
-    "alfy": "^0.9.1",
-    "bluebird": "^3.5.1",
-    "deep-extend": "^0.6.0",
-    "sqlite": "^3.0.3"
+    "alfy": "^2.0.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
   },
   "scripts": {
     "postinstall": "alfy-init",
