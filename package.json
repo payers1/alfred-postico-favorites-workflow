@@ -8,7 +8,10 @@
     "alfred",
     "postico"
   ],
-  "repository": "payers1/alfred-postico-favorites-workflow",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/payers1/alfred-postico-favorites-workflow.git"
+  },
   "author": {
     "name": "Phill Ayers",
     "url": "https://phillayers.com"
